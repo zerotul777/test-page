@@ -1,0 +1,111 @@
+.custom-search {
+	width: 170px;
+	position: relative;
+	display: flex;
+
+	@include vp-1679 {
+		width: 100%;
+
+		&::before {
+			content: '';
+			width: 39px;
+			height: 10px;
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+		}
+
+		&:hover,
+		&:focus-within {
+			.custom-search__field {
+				transform: translateY(49px);
+				clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+			}
+		}
+	}
+
+	&__field {
+		width: 100%;
+		font-family: $ff-main;
+		padding: 9px 35px 9px 20px;
+		border: 1px solid $color-white-smoke;
+		border-radius: 88px;
+		font-size: 16px;
+		line-height: 16px;
+		outline: none;
+		transition: clip-path $transition-300, transform $transition-300,
+			border-color $transition-300;
+
+		&:hover,
+		&:focus-visible {
+			border-color: $color-black;
+		}
+
+		@include vp-1679 {
+			position: absolute;
+			width: 200px;
+			padding: 9px 20px;
+			left: 0;
+			top: 0;
+			border-color: $color-seal-brown;
+			transform: translateY(39px);
+			clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+
+			&:hover {
+				clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+			}
+		}
+
+		@media (max-width: 1279px) {
+			width: 170px;
+			left: unset;
+			right: -49px;
+			clip-path: polygon(65% 0, 65% 0, 65% 0, 65% 0);
+
+			&:hover {
+				clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 13px;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus-visible {
+			.custom-search__icon {
+				color: $color-persimmon;
+			}
+		}
+
+		@include vp-1679 {
+			position: relative;
+			top: unset;
+			right: unset;
+			transform: none;
+			width: 39px;
+			height: 39px;
+			border-radius: 50%;
+			background-color: $color-seal-brown;
+			color: $color-white;
+		}
+	}
+
+	&__icon {
+		width: 22px;
+		height: 23px;
+		flex-shrink: 0;
+		transition: color $transition-300;
+	}
+}

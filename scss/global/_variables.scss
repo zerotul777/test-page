@@ -1,0 +1,30 @@
+/* Fonts */
+/* ------------------------------------ */
+$ff-main: "Lato", "Arial", sans-serif;
+$ff-roboto: "Roboto", "Arial", sans-serif;
+$ff-korataki: "Korataki", "Times New Roman", serif;
+$ff-inter: "Inter", "Arial", sans-serif;
+
+/* Colors */
+/* ------------------------------------ */
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-seal-brown: #231815;
+$color-nero: #1A1A1A;
+$color-persimmon: #E45302;
+$color-gray: #808080;
+$color-white-smoke: #F5F5F5;
+$color-black-alt: #0C0C0C;
+$color-white-50: rgba($color-white, 0.5);
+$color-black-50: rgba($color-black, 0.5);
+
+/* Breakpoints */
+/* ------------------------------------ */
+$vp-mobile: 767px;
+$vp-tablet: 1023px;
+$vp-desktop-wqhd: 1679px;
+
+/* Animation */
+/* ------------------------------------ */
+$transition-300: 0.3s ease-in;
+
